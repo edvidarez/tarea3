@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout android:layout_height="match_parent"
+    android:id="@+id/coordinationLayout"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.edvidarez.tarea3.ActivityMain">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/main_activity_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxHeight="@dimen/maxHeight"
+                android:scaleType="centerInside"
+                android:adjustViewBounds="true"
+                android:src="@drawable/vintage" />
+            <View
+                android:id="@+id/main_activity_line"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/one"
+                android:background="@android:color/darker_gray"
+                android:layout_alignBottom="@+id/main_activity_image"
+                />
+
+            <RelativeLayout
+                android:layout_below="@id/main_activity_line"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/ten"
+                >
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/main_activity_reference"
+                    >
+
+                </View>
+                <TextView
+                    android:id="@+id/main_activity_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title"
+                    android:textSize="@dimen/title_size"
+                    android:layout_below="@id/main_activity_reference"
+                    />
+                <ImageButton
+                    android:id="@+id/main_activity_like"
+                    android:layout_width="@dimen/img_width"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerCrop"
+
+                    android:layout_alignEnd="@id/main_activity_reference"
+                    android:layout_below="@id/main_activity_reference"
+                    android:layout_alignBottom="@id/main_activity_title"
+                    android:layout_marginHorizontal="@dimen/like_horizontal"
+
+
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/like"
+                    android:background="@color/transparent"
+
+                    />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/main_activity_color_label"
+                    android:text="@string/color_lbl"
+                    android:textSize="@dimen/subtitle_size"
+                    android:paddingTop="@dimen/sub_title_padding"
+                    android:textColor="@color/black"
+                    android:layout_below="@id/main_activity_title"
+                    />
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:id="@+id/main_activity_color_selector"
+                    android:layout_below="@+id/main_activity_color_label">
+
+                    <RadioButton
+                        android:id="@+id/bicycle_gray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/gray"
+                        android:layout_marginHorizontal="@dimen/select_button"
+                        />
+                    <RadioButton
+                        android:id="@+id/bicycle_brown"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/brown"
+                        android:layout_marginHorizontal="@dimen/select_button"
+
+                        />
+                    <RadioButton
+                        android:id="@+id/bicycle_pink"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/select_button"
+
+                        android:buttonTint="@color/pink"/>
+                    <RadioButton
+                        android:id="@+id/bicycle_black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/select_button"
+
+                        android:buttonTint="@color/black"/>
+                </RadioGroup>
+                <Button
+                    android:id="@+id/main_activity_button_S"
+                    android:layout_width="@dimen/button_square"
+                    android:layout_height="@dimen/button_square"
+                    android:layout_below="@id/main_activity_color_selector"
+                    android:text="@string/xs"
+                    android:background="@drawable/border"
+                    android:layout_margin="@dimen/ten"
+                    android:onClick="clickOnSizeButton"
+                    android:textColor="@color/colorPrimary"
+
+                    />
+                <Button
+                    android:layout_width="@dimen/button_square"
+                    android:layout_height="@dimen/button_square"
+                    android:id="@+id/main_activity_button_M"
+                    android:layout_below="@id/main_activity_color_selector"
+                    android:layout_toRightOf="@id/main_activity_button_S"
+                    android:text="@string/m"
+                    android:background="@drawable/border"
+                    android:layout_margin="@dimen/ten"
+                    android:onClick="clickOnSizeButton"
+                    android:textColor="@color/colorPrimary"
+
+                    />
+                <Button
+                    android:layout_width="@dimen/button_square"
+                    android:layout_height="@dimen/button_square"
+                    android:id="@+id/main_activity_button_L"
+                    android:layout_below="@id/main_activity_color_selector"
+                    android:layout_toRightOf="@id/main_activity_button_M"
+                    android:text="@string/l"
+                    android:background="@drawable/border"
+                    android:layout_margin="@dimen/ten"
+                    android:onClick="clickOnSizeButton"
+                    android:textColor="@color/colorPrimary"
+
+                    />
+                <Button
+                    android:layout_width="@dimen/button_square"
+                    android:layout_height="@dimen/button_square"
+                    android:layout_margin="@dimen/ten"
+                    android:id="@+id/main_activity_button_XL"
+                    android:layout_below="@id/main_activity_color_selector"
+                    android:layout_toRightOf="@id/main_activity_button_L"
+                    android:text="@string/xl"
+                    android:background="@drawable/border"
+                    android:onClick="clickOnSizeButton"
+                    android:textColor="@color/colorPrimary"
+
+                    />
+                <TextView
+                    android:id="@+id/main_activity_description_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/main_activity_button_S"
+                    android:text="@string/description"
+                    android:textSize="@dimen/subtitle_size"
+                    android:paddingTop="@dimen/sub_title_padding"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/main_activity_description_label"
+                    android:id="@+id/main_activity_description"
+                    android:text="@string/description_text"
+                    />
+                <TextView
+                    android:id="@+id/main_activity_measurement_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/main_activity_description"
+                    android:text="@string/measurement"
+                    android:textSize="@dimen/title_size"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="@dimen/sub_title_padding"
+                    />
+                <TextView
+                    android:id="@+id/main_activity_measurement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/main_activity_measurement_label"
+                    android:text="@string/measurement_text"
+                    />
+                <Button
+                    android:id="@+id/main_activity_add"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/add_cart_text"
+                    android:layout_below="@id/main_activity_measurement"
+                    android:layout_marginVertical="@dimen/ten"
+                    />
+
+            </RelativeLayout>
+
+
+
+        </RelativeLayout>
+
+
+
+    </ScrollView>
+
+</android.support.design.widget.CoordinatorLayout>
